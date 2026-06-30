@@ -15,5 +15,5 @@ Time taken for one 128*128 matrix multiplication: 0.002044166421890259 seconds
 <br/>
 
 
-Why is the C++ implementation 10x slower than the Python implementation?  
+## Why is the C++ implementation 10x slower than the Python implementation?  
 
