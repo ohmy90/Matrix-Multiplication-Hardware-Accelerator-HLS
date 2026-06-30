@@ -1,6 +1,6 @@
 # Matrix-Multiplication-Hardware-Accelerator-HLS
 
-A matrix hardware accelerator done by following Xilinx's project-based learning approach. There a few differences: notably a different FPGA board is used, Jupyter Notebook is avoided to run the project on my PC and a C++ software implementation is included to discuss the differences in compiler, code execution, libraries, etc.
+A matrix hardware accelerator done by following Xilinx's project-based learning approach. There a few differences: notably a different FPGA board is used (AX7035B which is "weaker" than the reccomended PYNQ-Z2), Jupyter Notebook is avoided to run the project on my PC and a C++ software implementation is included to discuss the differences in compiler, code execution, libraries, etc.
 
 https://xilinx.github.io/xup_high_level_synthesis_design_flow/matmult.html
 
