@@ -13,7 +13,7 @@ Time taken for matrix multiplication: 0.0225571 seconds
 
 ### Python software implementation for matrix multiplication
 <br/>
-Time taken for one 128*128 matrix multiplication: 0.002044166421890259 seconds  
+Time taken for one 128*128 matrix multiplication: 0.002044166421890259 seconds = 2.044 ms
 <br/>
 
 
@@ -22,5 +22,24 @@ Time taken for one 128*128 matrix multiplication: 0.002044166421890259 seconds
 Placeholder, to discuss at a later date (when I am not so tired).
 
 <br/>
+
+
 ## Part 2 results:  
-<img width="1190" height="415" alt="image" src="https://github.com/user-attachments/assets/656100a9-a616-4a65-9dd1-fe550e87544a" />
+<br/>
+### Design from XILINX:
+<br/>
+<img width="1210" height="330" alt="image" src="https://github.com/user-attachments/assets/51f15a85-da9e-46f5-b8c0-b6962ff2f699" />
+
+### Design after modifications:
+Placeholder
+
+## Part 3 results:  
+
+### Design from XILINX:
+203113 cycles * 8.00 nS (target timing estimate) = 1.625 ms
+100% DSP usage post implementation as well
+### Design after modifications:
+Placeholder
+
+## Discussion
+The hardware accelerator has a speedup of roughly 25.7%. Considering that the design is compared to an 8-core 16-thread CPU operating at 4.6Ghz (at best), the design is a success.
