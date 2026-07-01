@@ -1,6 +1,8 @@
 # Matrix-Multiplication-Hardware-Accelerator-HLS
 
-A matrix hardware accelerator done by following Xilinx's project-based learning approach. There a few differences: notably a different FPGA board is used (AX7035B which is "weaker" than the PYNQ-Z2 used by Xilinx), the project on my PC instead of Jupyter Notebook and a C++ software implementation is included to discuss the differences in code execution, libraries, etc. (to explore the software perspective). In addition, because the AX7035B is a "pure" FPGA (no PS side), measuring its execution time for matrix multiplication is found by: Execution time= # of cycles * target clock period (hls.clk).
+A matrix hardware accelerator done by following Xilinx's project-based learning approach. There a few differences: notably a different FPGA board is used (AX7035B which is "weaker" than the PYNQ-Z2 used by Xilinx), the project on my PC instead of Jupyter Notebook and a C++ software implementation is included to discuss the differences in code execution, libraries, etc. (to explore the software perspective). 
+
+In addition, because the AX7035B is a "pure" FPGA (no PS side), measuring its execution time for matrix multiplication is found by: Execution time= # of cycles * target clock period (hls.clk).
 
 https://xilinx.github.io/xup_high_level_synthesis_design_flow/matmult.html
 
