@@ -38,7 +38,7 @@ Placeholder
 
 ### Design from XILINX:
 203113 cycles * 8.00 nS (target timing estimate) = 1.625 ms
-
+<br/>
 100% DSP usage post implementation as well
 ### Design after modifications:
 Placeholder
