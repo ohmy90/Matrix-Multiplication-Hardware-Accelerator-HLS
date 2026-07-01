@@ -1,12 +1,12 @@
 # Matrix-Multiplication-Hardware-Accelerator-HLS
 
-A matrix hardware accelerator done by following Xilinx's project-based learning approach. There a few differences: notably a different FPGA board is used (AX7035B which is "weaker" than the PYNQ-Z2 used by Xilinx), the project on my PC instead of Jupyter Notebook and a C++ software implementation is included to discuss the differences in code execution, compiler, libraries, etc. (to explore the software perspective). 
+<p align="justify"> A matrix hardware accelerator done by following Xilinx's project-based learning approach. There a few differences: notably a different FPGA board is used (AX7035B which is "weaker" than the PYNQ-Z2 used by Xilinx), the project on my PC instead of Jupyter Notebook and a C++ software implementation is included to discuss the differences in code execution, compiler, libraries, etc. (to explore the software perspective). 
 
 In addition, because the AX7035B is a "pure" FPGA (no PS side), measuring its execution time for matrix multiplication is found by: Execution time= # of cycles * target clock period (hls.clk).
 
 https://xilinx.github.io/xup_high_level_synthesis_design_flow/matmult.html
 
-The design makes use of block matrix multiplication. Basically the original matrix is partitioned into two submatrices, pairing them for local caching. We can then multiply the appropriate submatrices to obtain a portion of the output matrix result and reduced area usage with reduced data read operations.
+The design makes use of block matrix multiplication. Basically the original matrix is partitioned into two submatrices, pairing them for local caching. We can then multiply the appropriate submatrices to obtain a portion of the output matrix result and reduced area usage with reduced data read operations. </p>
 
 ## Part 1 results:  
 Both are ran on AMD Ryzen 7 5800XT 8-Core Processor.  
@@ -25,7 +25,10 @@ Time taken for one 128*128 matrix multiplication: 0.002044166421890259 seconds =
 ## Why is the C++ implementation 10x slower than the Python implementation without arguments? And the importance of good software design.
 <br/>
 
-Both codes are written to be executed on a single thread and sequentially (integers are used so single-threaded for Numpy). Furthermore, the implementations have a time complexity of O(N^3) since the matrices multiply by the standard method using three nested loops. The programs could have been optimized in a number of ways: multicore and multithread execution and local memory locations for faster read/write operations. Nevertheless, adding the flags lead to an improvement of over 20x in the C++ implementation. O3 tells the compiler to maximize the execution speed of the program by adopting agressive compilation methods, and march=native forces the compiler to compile exactly for the current CPU (i.e. force it to use its instructions) . As such, one can see the importance of compiler/sofware optimization in hardware-software co-design. 
+<p align="justify"> Both codes are written to be executed on a single thread and sequentially (integers are used so single-threaded for Numpy). Furthermore, the implementations have a time complexity of O(N^3) since the matrices multiply by the standard method using three nested loops. The programs could have been optimized in a number of ways: multicore and multithread execution and local memory locations for faster read/write operations. Nevertheless, adding the flags lead to an improvement of over 20x in the C++ implementation. 
+
+O3 tells the compiler to maximize the execution speed of the program by adopting agressive compilation methods, and march=native forces the compiler to compile exactly for the current CPU (i.e. force it to use its instructions) . As such, one can see the importance of compiler/sofware optimization in hardware-software co-design.  </p>
+
 
 <br/>
 
