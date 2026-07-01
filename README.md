@@ -4,6 +4,8 @@ A matrix hardware accelerator done by following Xilinx's project-based learning 
 
 https://xilinx.github.io/xup_high_level_synthesis_design_flow/matmult.html
 
+The design makes use of block matrix multiplication. Basically the original matrix is partitioned into two submatrices, pairing them for local caching. We can then multiply the appropriate submatrices to obtain a portion of the output matrix result and reduced area usage with reduced data read operations.
+
 ## Part 1 results:  
 Both are ran on AMD Ryzen 7 5800XT 8-Core Processor.  
 
