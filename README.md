@@ -23,9 +23,7 @@ Placeholder, to discuss at a later date (when I am not so tired).
 
 <br/>
 
-
 ## Part 2 results:  
-<br/>
 
 ### Design from XILINX:
 
