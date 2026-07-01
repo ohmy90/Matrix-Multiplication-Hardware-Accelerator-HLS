@@ -26,7 +26,10 @@ Placeholder, to discuss at a later date (when I am not so tired).
 
 ## Part 2 results:  
 <br/>
+
 ### Design from XILINX:
+
+
 <br/>
 <img width="1210" height="330" alt="image" src="https://github.com/user-attachments/assets/51f15a85-da9e-46f5-b8c0-b6962ff2f699" />
 
