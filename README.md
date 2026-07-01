@@ -12,12 +12,11 @@ The design makes use of block matrix multiplication. Basically the original matr
 Both are ran on AMD Ryzen 7 5800XT 8-Core Processor.  
 
 ### C++ software implementation for matrix multiplication
-<br/>
 Time taken for matrix multiplication: 0.0225571 seconds  
+
 Time taken for matrix multiplication (after implementing O3 argument and march=native): 0.0009891 seconds = 0.9891 ms
 
 ### Python software implementation for matrix multiplication
-<br/>
 Time taken for one 128*128 matrix multiplication: 0.002044166421890259 seconds = 2.044 ms
 <br/>
 
