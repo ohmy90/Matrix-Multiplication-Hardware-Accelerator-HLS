@@ -19,7 +19,8 @@ Time taken for one 128*128 matrix multiplication: 0.002044166421890259 seconds =
 
 ## Why is the C++ implementation 10x slower than the Python implementation?  
 <br/>
-Placeholder, to discuss at a later date (when I am not so tired).
+
+The C++ code is written to be executed on a single thread and sequentially. Furthermore, the implementation has a time complexity of O(N^3) since the matrices multiply by the standard method using three nested loops. The Python code uses a different algorithm to multiply the matrices with the Stanford method. The time complexity is effectevily reduced to O(N^2.3728639). The Python code also makes full usage of the CPU's resources (threads/cores) to fast-track the calculations.
 
 <br/>
 
