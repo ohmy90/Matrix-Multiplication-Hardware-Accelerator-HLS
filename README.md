@@ -54,4 +54,5 @@ O3 tells the compiler to maximize the execution speed of the program by adopting
 
 ## Discussion
 The hardware accelerator has a speedup of roughly 25.7% (i.e. 1.257 faster than the CPU - Python implementation).
+
 After an adjustement, the design is roughly 2.03 faster than the Python baseline (by simply increasing the local array size for better data read/write operations).
