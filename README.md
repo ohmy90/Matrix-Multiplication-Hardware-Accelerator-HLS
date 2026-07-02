@@ -56,3 +56,5 @@ O3 tells the compiler to maximize the execution speed of the program by adopting
 The hardware accelerator has a speedup of roughly 25.7% (i.e. 1.257 faster than the CPU - Python implementation).
 
 After an adjustement, the design is roughly 2.03 faster than the Python baseline (by simply increasing the local array size for better data read/write operations).
+
+The design can still be further improved. For example, seperate the tiles read and write for blocks A and B into functions, and then apply HLS pragma dataflow for pipelining the tasks. This is doable since blocks A and B hardly influence each other. Another possible imrpovement is int8 packing in the DSP slice. Since the DSP slice contains 27x18 bits for the multiplier and the data within this design is represented from 0 to 255, one could pack two multiplication calculations in a single cycle. The tradeoff is that the code will need refactoring, which is hard to exactly achieve in HLS. Designing at the HDL level with better bit manipulation easily overcomes this issue.
