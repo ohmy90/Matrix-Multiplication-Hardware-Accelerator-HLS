@@ -21,7 +21,7 @@ void mmult_hw(int* in1, int* in2, int* out, int dim)
 #pragma HLS INTERFACE s_axilite port=dim  bundle=CTRL
 #pragma HLS INTERFACE s_axilite port=return bundle=CTRL
 
-#pragma HLS array_partition variable=Abuf cyclic factor=64 dim=2 //change array partitioning
+#pragma HLS array_partition variable=Abuf cyclic factor=64 dim=2 
 #pragma HLS array_partition variable=Bbuf cyclic factor=64 dim=1
 
      SWEEP_B_BLK:
