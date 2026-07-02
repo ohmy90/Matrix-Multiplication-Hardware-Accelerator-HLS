@@ -21,7 +21,7 @@ Time taken for one 128*128 matrix multiplication: 0.002044166421890259 seconds =
 <br/>
 
 
-## Why is the C++ implementation 10x slower than the Python implementation without arguments? And the importance of good software design.
+## Why is the C++ implementation 10x slower than the Python implementation without arguments? And the importance of software/compiler design.
 <br/>
 
 <p align="justify"> Both codes are written to be executed on a single thread and sequentially (integers are used so single-threaded for Numpy). Furthermore, the implementations have a time complexity of O(N^3) since the matrices multiply by the standard method using three nested loops. The programs could have been optimized in a number of ways: multicore and multithread execution and local memory locations for faster read/write operations. Nevertheless, adding the flags lead to an improvement of over 20x in the C++ implementation. 
@@ -40,7 +40,8 @@ O3 tells the compiler to maximize the execution speed of the program by adopting
 <img width="1210" height="330" alt="image" src="https://github.com/user-attachments/assets/51f15a85-da9e-46f5-b8c0-b6962ff2f699" />
 
 ### Design after modifications:
-Placeholder
+<img width="1152" height="177" alt="image" src="https://github.com/user-attachments/assets/60b9b17c-ab58-4d0d-9b10-9354a2c9018e" />
+
 
 ## Part 3 results:  
 
@@ -49,8 +50,8 @@ Placeholder
 <br/>
 100% DSP usage post implementation as well
 ### Design after modifications:
-Placeholder
+125881 cycles * 8.00 nS (target timing estimate) = 1.007 ms
 
 ## Discussion
 The hardware accelerator has a speedup of roughly 25.7% (i.e. 1.257 faster than the CPU - Python implementation).
-After bringing modifications, the design has a speedup of 
+After an adjustement, the design is roughly 2.03 faster than the Python baseline (by simply increasing the local array size for better data read/write operations).
