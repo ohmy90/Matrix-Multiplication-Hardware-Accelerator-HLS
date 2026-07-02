@@ -52,4 +52,5 @@ Placeholder
 Placeholder
 
 ## Discussion
-The hardware accelerator has a speedup of roughly 25.7% (i.e. 1.257 faster than the CPU in the Python implementation). Considering that the design is compared to an 8-core 16-thread CPU operating at 4.6Ghz (at best), the design is a success.
+The hardware accelerator has a speedup of roughly 25.7% (i.e. 1.257 faster than the CPU - Python implementation).
+After bringing modifications, the design has a speedup of 
